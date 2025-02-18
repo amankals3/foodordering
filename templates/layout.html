@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cravecore</title>
+    <link rel="stylesheet" href="{{url_for('static',filename='home.css')}}">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&amp;display=swap" rel="stylesheet"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+    <section class="upper">
+        <nav>
+            <div class="location">
+                <i class="fas fa-map-marker-alt">
+                </i>
+                <div class="location-input">
+                    <input type="text" id="location" placeholder="location" /><br>
+                    <button id="locate-btn">Use My Location</button>
+                    <button id="search-btn">search</button>
+                    <div id="location-output"></div>
+                </div>
+                <div id="location-output"></div>
+            </div>
+        
+            <script src="{{url_for('static',filename='location.js')}}"></script>
+            <div class="logo">CRAVECORE</div>
+            <span class="open-nav" onclick="openNav()">
+                &#9776;
+               </span>
+               <div class="side-nav" id="mySidenav">
+                <a class="close-btn" href="javascript:void(0)" onclick="closeNav()">
+                 &times;
+                </a>
+                <a href="/">
+                 Home
+                </a>
+                <a href="/about">
+                 About
+                </a>
+                <a href="/menu">
+                 Menu
+                </a>
+                <a href="/blog">
+                 Blogs
+                </a>
+                <a href="/contact">
+                 Contact
+                </a>
+                <a href="/dinein">
+                 Dine-In
+                </a>
+               </div>
+
+            <ul>
+                <li><a href="/">Home</a></li>
+                <li><a href="/menu">Menu</a></li>
+                <li><a href="/dinein">Dine-In</a></li>
+                <li><a href="/blog">Blog</a></li>
+                <li><a href="/about">About Us</a></li>
+                <li><a href="/contact">Contact</a></li>
+            </ul>
+
+           
+           
+        </nav>
+    </section>
+
+  {% block body %}{% endblock %}

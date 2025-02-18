@@ -1,0 +1,49 @@
+
+{% extends "layout.html" %}
+{% block body %}
+    <!-- <div class="search-bar">
+    <form action="" class="search">
+        <div class="container">
+            <input type="search" placeholder="Search to eat....">
+        </div>
+    </div> -->
+        <section class="grid">
+            <div class="content">
+                <div class="content-left">
+                    <div class="info">
+                        <div class="hero">
+                            <div class="hero-content">
+                        <p class="p1">Welcome to Cravecore</p>
+                        <h2 > Fulfill Your Cravings<br>Order Now!!</h2>
+                    <p > Order food now and get it delivered within time ,
+                            at your doorstep all fresh 
+                            and delicious</p>
+                        </div>
+                    </div>
+                    </div>
+                    <button><a href="/menu">Explore Now </a></button>
+                </div>
+                <div class="content-right">
+                    <img class="img" src="{{url_for('static',filename='2hup1fqa.png')}}">
+                </div>
+            </div>
+         </section>
+      
+            <script>
+                function openNav() {
+            document.getElementById("mySidenav").style.width = "250px";
+        }
+
+        function closeNav() {
+            document.getElementById("mySidenav").style.width = "0";
+        }
+            document.addEventListener('DOMContentLoaded', () => {
+    const heroContent = document.querySelector('.hero-content');
+
+    setTimeout(() => {
+        heroContent.style.opacity = '1';
+        heroContent.style.transform = 'translateY(0)'; 
+    }, 500); 
+});
+            </script>  
+{% endblock %}

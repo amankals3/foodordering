@@ -1,0 +1,367 @@
+{% extends "layout.html" %}
+{% block body %}
+<link rel="stylesheet" href="{{url_for('static',filename='dinein.css')}}">
+<link rel="stylesheet" href="{{url_for('static',filename='dinenav.css')}}">
+    <h2 class="head1">Select a Dining Category</h2>
+    <section class="categories">
+        <div class="category" onclick="toggleCategory('luxury')">Luxury Dining</div>
+        <div class="category" onclick="toggleCategory('trending')">Trending Restaurants</div>
+        <div class="category" onclick="toggleCategory('newInTown')">New in Town</div>
+    </section>
+
+    <!-- Luxury Dining Section -->
+    <section class="category-options" id="luxury" style="display:none;">
+        <h3>Luxury Dining</h3>
+        <div class="places">
+            <!-- 1st Restaurant -->
+            <div class="place-card">
+                <img src="{{url_for('static',filename='luxuryres1.jpg')}}" alt="The Oberoi">
+                <h3>The Oberoi</h3>
+                <p>Speciality: Fine Indian and Continental Cuisine</p>
+                <p>₹5,000 per person</p>
+                <button onclick="toggleBookingForm('The Oberoi')">Book a Table</button>
+                <div class="booking-form" id="The-Oberoi" style="display:none;">
+                    <h4>Book a Table</h4>
+                    <form id="booking-form-The Oberoi">
+                        <label>Your Name:</label>
+                        <input type="text" id="name-The Oberoi" required>
+                        <label>Reservation Date:</label>
+                        <input type="date" id="date-The Oberoi" required>
+                        <label>Time:</label>
+                        <input type="time" id="time-The Oberoi" required>
+                        <label>Number of Guests:</label>
+                        <input type="number" id="guests-The Oberoi" min="1" required>
+                        <label>Payment Method:</label>
+                        <select id="payment-The Oberoi" required>
+                            <option value="UPI">UPI</option>
+                            <option value="Credit Card">Credit Card</option>
+                            <option value="Net Banking">Net Banking</option>
+                        </select>
+                        <button type="button" onclick="confirmBooking(event, 'The Oberoi')">Confirm Booking</button>
+                    </form>
+                </div>
+            </div>
+
+            <!-- 2nd Restaurant -->
+            <div class="place-card">
+                <img src="{{url_for('static',filename='luxuryres2.jpg')}}" alt="The Taj Mahal Palace">
+                <h3>The Taj Mahal Palace</h3>
+                <p>Speciality: Royal Indian Cuisine</p>
+                <p>₹6,000 per person</p>
+                <button onclick="toggleBookingForm('The Taj Mahal Palace')">Book a Table</button>
+                <div class="booking-form" id="The-Taj-Mahal-Palace" style="display:none;">
+                    <h4>Book a Table</h4>
+                    <form id="booking-form-The Taj Mahal Palace">
+                        <label>Your Name:</label>
+                        <input type="text" id="name-The Taj Mahal Palace" required>
+                        <label>Reservation Date:</label>
+                        <input type="date" id="date-The Taj Mahal Palace" required>
+                        <label>Time:</label>
+                        <input type="time" id="time-The Taj Mahal Palace" required>
+                        <label>Number of Guests:</label>
+                        <input type="number" id="guests-The Taj Mahal Palace" min="1" required>
+                        <label>Payment Method:</label>
+                        <select id="payment-The Taj Mahal Palace" required>
+                            <option value="UPI">UPI</option>
+                            <option value="Credit Card">Credit Card</option>
+                            <option value="Net Banking">Net Banking</option>
+                        </select>
+                        <button type="button" onclick="confirmBooking(event, 'The Taj Mahal Palace')">Confirm Booking</button>
+                    </form>
+                </div>
+            </div>
+
+            <!-- 3rd Restaurant -->
+            <div class="place-card">
+                <img src="{{url_for('static',filename='luxuryres3.jpg')}}" alt="Leela Palace">
+                <h3>Leela Palace</h3>
+                <p>Speciality: French and Mediterranean Cuisine</p>
+                <p>₹7,000 per person</p>
+                <button onclick="toggleBookingForm('Leela Palace')">Book a Table</button>
+                <div class="booking-form" id="Leela-Palace" style="display:none;">
+                    <h4>Book a Table</h4>
+                    <form id="booking-form-Leela Palace">
+                        <label>Your Name:</label>
+                        <input type="text" id="name-Leela Palace" required>
+                        <label>Reservation Date:</label>
+                        <input type="date" id="date-Leela Palace" required>
+                        <label>Time:</label>
+                        <input type="time" id="time-Leela Palace" required>
+                        <label>Number of Guests:</label>
+                        <input type="number" id="guests-Leela Palace" min="1" required>
+                        <label>Payment Method:</label>
+                        <select id="payment-Leela Palace" required>
+                            <option value="UPI">UPI</option>
+                            <option value="Credit Card">Credit Card</option>
+                            <option value="Net Banking">Net Banking</option>
+                        </select>
+                        <button type="button" onclick="confirmBooking(event, 'Leela Palace')">Confirm Booking</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Trending Restaurants Section -->
+    <section class="category-options" id="trending" style="display:none;">
+        <h3>Trending Restaurants</h3>
+        <div class="places">
+            <!-- 1st Trending Restaurant -->
+            <div class="place-card">
+                <img src="{{url_for('static',filename='trendingres1.jpg')}}" alt="Bistro 360">
+                <h3>Bistro 360</h3>
+                <p>Speciality: Global Street Food</p>
+                <p>₹1,500 per person</p>
+                <button onclick="toggleBookingForm('Bistro 360')">Book a Table</button>
+                <div class="booking-form" id="Bistro-360" style="display:none;">
+                    <h4>Book a Table</h4>
+                    <form id="booking-form-Bistro 360">
+                        <label>Your Name:</label>
+                        <input type="text" id="name-Bistro 360" required>
+                        <label>Reservation Date:</label>
+                        <input type="date" id="date-Bistro 360" required>
+                        <label>Time:</label>
+                        <input type="time" id="time-Bistro 360" required>
+                        <label>Number of Guests:</label>
+                        <input type="number" id="guests-Bistro 360" min="1" required>
+                        <label>Payment Method:</label>
+                        <select id="payment-Bistro 360" required>
+                            <option value="UPI">UPI</option>
+                            <option value="Credit Card">Credit Card</option>
+                            <option value="Net Banking">Net Banking</option>
+                        </select>
+                        <button type="button" onclick="confirmBooking(event, 'Bistro 360')">Confirm Booking</button>
+                    </form>
+                </div>
+            </div>
+
+            <!-- 2nd Trending Restaurant -->
+            <div class="place-card">
+                <img src="{{url_for('static',filename='trendingres2.jpg')}}" alt="Urban Eats">
+                <h3>Urban Eats</h3>
+                <p>Speciality: Fusion Cuisine</p>
+                <p>₹2,000 per person</p>
+                <button onclick="toggleBookingForm('Urban Eats')">Book a Table</button>
+                <div class="booking-form" id="Urban-Eats" style="display:none;">
+                    <h4>Book a Table</h4>
+                    <form id="booking-form-Urban Eats">
+                        <label>Your Name:</label>
+                        <input type="text" id="name-Urban Eats" required>
+                        <label>Reservation Date:</label>
+                        <input type="date" id="date-Urban Eats" required>
+                        <label>Time:</label>
+                        <input type="time" id="time-Urban Eats" required>
+                        <label>Number of Guests:</label>
+                        <input type="number" id="guests-Urban Eats" min="1" required>
+                        <label>Payment Method:</label>
+                        <select id="payment-Urban Eats" required>
+                            <option value="UPI">UPI</option>
+                            <option value="Credit Card">Credit Card</option>
+                            <option value="Net Banking">Net Banking</option>
+                        </select>
+                        <button type="button" onclick="confirmBooking(event, 'Urban Eats')">Confirm Booking</button>
+                    </form>
+                </div>
+            </div>
+
+            <div class="place-card">
+                <img src="{{url_for('static',filename='trendingres3.jpg')}}" alt="SavorySpice Haven">
+                <h3>SavorySpice Haven</h3>
+                <p>Speciality: Speacialize Street Food</p>
+                <p>₹1,500 per person</p>
+                <button onclick="toggleBookingForm('SavorySpice Haven')">Book a Table</button>
+                <div class="booking-form" id="SavorySpice-Haven" style="display:none;">
+                    <h4>Book a Table</h4>
+                    <form id="booking-for-SavorySpice Haven">
+                        <label>Your Name:</label>
+                        <input type="text" id="name-SavorySpice Haven" required>
+                        <label>Reservation Date:</label>
+                        <input type="date" id="date-SavorySpice Haven" required>
+                        <label>Time:</label>
+                        <input type="time" id="time-SavorySpice Haven" required>
+                        <label>Number of Guests:</label>
+                        <input type="number" id="guests-SavorySpice Haven" min="1" required>
+                        <label>Payment Method:</label>
+                        <select id="payment-SavorySpice Haven" required>
+                            <option value="UPI">UPI</option>
+                            <option value="Credit Card">Credit Card</option>
+                            <option value="Net Banking">Net Banking</option>
+                        </select>
+                        <button type="button" onclick="confirmBooking(event, 'SavorySpice Haven')">Confirm Booking</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- New in Town Section -->
+    <section class="category-options" id="newInTown" style="display:none;">
+        <h3>New in Town</h3>
+        <div class="places">
+            <!-- 1st New Restaurant -->
+            <div class="place-card">
+                <img src="{{url_for('static',filename='newintown1.jpg')}}" alt="Harvest Grille">
+                <h3>Harvest Grille</h3>
+                <p>Speciality: Farm-to-Table Experience</p>
+                <p>₹2,500 per person</p>
+                <button onclick="toggleBookingForm('Harvest Grille')">Book a Table</button>
+                <div class="booking-form" id="Harvest-Grille" style="display:none;">
+                    <h4>Book a Table</h4>
+                    <form id="booking-form-Harvest Grille">
+                        <label>Your Name:</label>
+                        <input type="text" id="name-Harvest Grille" required>
+                        <label>Reservation Date:</label>
+                        <input type="date" id="date-Harvest Grille" required>
+                        <label>Time:</label>
+                        <input type="time" id="time-Harvest Grille" required>
+                        <label>Number of Guests:</label>
+                        <input type="number" id="guests-Harvest Grille" min="1" required>
+                        <label>Payment Method:</label>
+                        <select id="payment-Harvest Grille" required>
+                            <option value="UPI">UPI</option>
+                            <option value="Credit Card">Credit Card</option>
+                            <option value="Net Banking">Net Banking</option>
+                        </select>
+                        <button type="button" onclick="confirmBooking(event, 'Harvest Grille')">Confirm Booking</button>
+                    </form>
+                </div>
+            </div>
+
+            <!-- 2nd New Restaurant -->
+            <div class="place-card">
+                <img src="{{url_for('static',filename='newintown2.jpg')}}" alt="The Modernist">
+                <h3>The Modernist</h3>
+                <p>Speciality: Modernist Cuisine</p>
+                <p>₹3,000 per person</p>
+                <button onclick="toggleBookingForm('The Modernist')">Book a Table</button>
+                <div class="booking-form" id="The-Modernist" style="display:none;">
+                    <h4>Book a Table</h4>
+                    <form id="booking-form-The Modernist">
+                        <label>Your Name:</label>
+                        <input type="text" id="name-The Modernist" required>
+                        <label>Reservation Date:</label>
+                        <input type="date" id="date-The Modernist" required>
+                        <label>Time:</label>
+                        <input type="time" id="time-The Modernist" required>
+                        <label>Number of Guests:</label>
+                        <input type="number" id="guests-The Modernist" min="1" required>
+                        <label>Payment Method:</label>
+                        <select id="payment-The Modernist" required>
+                            <option value="UPI">UPI</option>
+                            <option value="Credit Card">Credit Card</option>
+                            <option value="Net Banking">Net Banking</option>
+                        </select>
+                        <button type="button" onclick="confirmBooking(event, 'The Modernist')">Confirm Booking</button>
+                    </form>
+                </div>
+            </div>
+
+            <div class="place-card">
+                <img src="{{url_for('static',filename='newintown3.jpg')}}" alt="Creamy delight">
+                <h3>Creamy Delight</h3>
+                <p>Speciality: Bestest Food Experience</p>
+                <p>₹3,500 per person</p>
+                <button onclick="toggleBookingForm('Creamy Delight')">Book a Table</button>
+                <div class="booking-form" id="Creamy-Delight" style="display:none;">
+                    <h4>Book a Table</h4>
+                    <form id="booking-form-Creamy Delight">
+                        <label>Your Name:</label>
+                        <input type="text" id="name-Creamy Delight" required>
+                        <label>Reservation Date:</label>
+                        <input type="date" id="date-Creamy Delight" required>
+                        <label>Time:</label>
+                        <input type="time" id="time-Creamy Delight" required>
+                        <label>Number of Guests:</label>
+                        <input type="number" id="guests-Creamy Delight" min="1" required>
+                        <label>Payment Method:</label>
+                        <select id="payment-Creamy Delight" required>
+                            <option value="UPI">UPI</option>
+                            <option value="Credit Card">Credit Card</option>
+                            <option value="Net Banking">Net Banking</option>
+                        </select>
+                        <button type="button" onclick="confirmBooking(event, 'Creamy Delight')">Confirm Booking</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Footer Section -->
+    <footer>
+        <div class="footer-content">
+            <p>&copy; 2024 Cravecore Dine-In. All Rights Reserved.</p>
+            <p>Follow Us:</p>
+            <div class="social-media">
+                <a href="#" target="_blank">Facebook</a>
+                <a href="#" target="_blank">Twitter</a>
+                <a href="#" target="_blank">Instagram</a>
+            </div>
+            <p>Contact Us: <a href="mailto:support@cravecore.com">support@cravecore.com</a></p>
+        </div>
+    </footer>
+
+    <script>
+        // Function to toggle category visibility
+        function toggleCategory(category) {
+            const sections = document.querySelectorAll('.category-options');
+            sections.forEach(section => {
+                section.style.display = 'none';  // Hide all categories
+            });
+            const selectedCategory = document.getElementById(category);
+            selectedCategory.style.display = 'block';  // Show selected category
+        }
+    
+        // Function to toggle booking form visibility
+        function toggleBookingForm(restaurant) {
+            const bookingForm = document.getElementById(restaurant.replace(/ /g, '-'));
+            bookingForm.style.display = (bookingForm.style.display === 'none' || bookingForm.style.display === '') ? 'block' : 'none';
+        }
+    
+        // Function to confirm booking and save data to localStorage
+        function confirmBooking(event, restaurant) {
+            event.preventDefault();  // Prevent form submission
+    
+            // Collect form field values
+            const name = document.getElementById(`name-${restaurant}`).value.trim();
+            const date = document.getElementById(`date-${restaurant}`).value.trim();
+            const time = document.getElementById(`time-${restaurant}`).value.trim();
+            const guests = document.getElementById(`guests-${restaurant}`).value.trim();
+            const payment = document.getElementById(`payment-${restaurant}`).value.trim();
+    
+            // Validate fields
+            if (!name || !date || !time || !guests || !payment) {
+                alert('Please fill out all fields to confirm your booking.');
+                return;  // Stop execution if validation fails
+            }
+    
+            // Collect the booking data
+            const bookingData = {
+                restaurant,
+                name,
+                date,
+                time,
+                guests,
+                payment
+            };
+    
+            // Save booking data to localStorage
+            saveBookingToLocalStorage(bookingData);
+    
+            // Display confirmation message
+            alert(`Booking confirmed at ${restaurant} for ${guests} guests on ${date} at ${time}.`);
+    
+            // Clear the form fields after booking
+            document.getElementById(`booking-form-${restaurant}`).reset();
+        }
+    
+        // Function to save booking to localStorage
+        function saveBookingToLocalStorage(bookingData) {
+            let bookings = JSON.parse(localStorage.getItem('bookings')) || [];
+            bookings.push(bookingData);
+            localStorage.setItem('bookings', JSON.stringify(bookings));
+        }
+    </script>
+    
+</body>
+</html>
+{% endblock %}

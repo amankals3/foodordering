@@ -1,0 +1,91 @@
+{% extends "layout.html" %}
+{% block body %}
+<link rel="stylesheet" href="{{url_for('static',filename='blog.css')}}">
+    
+        <div class="menu">
+            <h1>OUR<span>BLOG</span></h1>
+            <div class="menu_box">
+                <div class="menu_card">
+    
+                    <div class="menu_image">
+                        <img src="{{url_for('static',filename='Ricotta-Meatballs.jpg')}}">
+                    </div>
+    
+                    <div class="small_card">
+                        <i class="fa-solid fa-heart"></i>
+                    </div>
+    
+                    <div class="menu_info">
+                        <h2>Ricotta Meatballs </h2>
+                        <h3>By Admin / 21 MAY 2024</h3>
+                        <p>
+                            These Ricotta Meatballs are an easy and delicious family favorite! Tender, juicy homemade meatballs with a jar of good marinara and a crispy topping to finish it all off. YUM!
+                        </p>
+                        <a href="https://pinchofyum.com/ricotta-meatballs-with-the-crispy-topping" class="menu_btn">READ MORE</a>
+                    </div>
+    
+                </div> 
+                
+                <div class="menu_card">
+    
+                    <div class="menu_image">
+                        <img src="{{url_for('static',filename='Broccoli-Cheese-Soup.jpg')}}">
+                    </div>
+    
+                    <div class="small_card">
+                        <i class="fa-solid fa-heart"></i>
+                    </div>
+    
+                    <div class="menu_info">
+                        <h2>Broccoli Cheese Soup </h2>
+                        <h3>By Admin / 21 MAY 2024</h3>
+                        <p>
+                            This Broccoli Cheese Soup is easy, creamy, and a perfect cozy classic. A silky-smooth soup base, little bites of just-right broccoli and carrots, and some sharp creamy cheddar cheese to finish it off.
+                        </p>
+                        <a href="https://pinchofyum.com/broccoli-cheese-soup" class="menu_btn">READ MORE</a>
+                    </div>
+    
+                </div> 
+    
+                <div class="menu_card">
+    
+                    <div class="menu_image">
+                        <img src="{{url_for('static',filename='Juicy-Lucy-Inside.PNG')}}">
+                    </div>
+    
+                    <div class="small_card">
+                        <i class="fa-solid fa-heart"></i>
+                    </div>
+    
+                    <div class="menu_info">
+                        <h2>Juicy Lucy </h2>
+                        <h3>By Admin / 23 JUNE 2024</h3>
+                        <p>
+                            A delicious hamburger stuffed with molten, bubbly, waterfalling cheese, all piled on a buttery toasted bun with all the fixings. The BEST.
+                        </p>
+                        <a href="https://pinchofyum.com/juicy-lucy" class="menu_btn">READ MORE</a>
+                    </div>
+                </div> 
+    
+                <div class="menu_card">
+    
+                    <div class="menu_image">
+                        <img src="{{url_for('static',filename='Lettuce-Wraps.jpg')}}">
+                    </div>
+    
+                    <div class="small_card">
+                        <i class="fa-solid fa-heart"></i>
+                    </div>
+    
+                    <div class="menu_info">
+                        <h2>Lettuce Wraps</h2>
+                        <h3>By Admin / 2 AUGUST 2024</h3>
+                        <p>
+                            These lettuce wraps are ridiculously good! Crunchy, fresh, and packed with tofu, brown rice, crispy onions, plus a drizzle of peanut sauce and spicy mayo. Delicious!
+                        </p>
+                        <a href="https://pinchofyum.com/tofu-and-brown-rice-lettuce-wraps" class="menu_btn">READ MORE</a>
+                    </div>
+    
+                </div> 
+         
+{% endblock %}
