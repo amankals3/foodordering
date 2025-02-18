@@ -1,0 +1,233 @@
+/* NAV BAR */
+*::after{
+    margin: 0;
+    padding: 0;
+    box-sizing:border-box;
+    font-family: sans-serif;
+}
+html{
+    scroll-behavior: smooth;
+}
+body{
+    background-color:  rgba(235, 173, 138, 0.759);
+    width:1200px;
+}
+.upper{
+    width: 100%;
+    height: 5vh;
+}
+section nav{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    position: absolute;
+    right: 0;
+    left: 0;
+    background: rgb(0, 0, 0);
+    box-shadow: 0 0 10px black;
+    z-index: 1000;
+} 
+section nav .logo{
+    width: 100px;
+    cursor: pointer;
+    margin: 7px 0;
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 1.2rem;
+    font-style:oblique;
+    color: rgb(179, 255, 0);
+    
+}
+section nav ul li{
+    display: inline-block;
+    margin: 0 15px;
+}
+section nav ul li a{
+    text-decoration: none;
+    color: rgb(255, 255, 255);
+    font-weight: 500;
+    font-size: 17px;
+    transition: 0.1s;
+}
+section nav ul li a::after{
+    content:'';
+    width: 100%;
+    height: 2px;
+    background: rgb(212, 255, 0);
+    display: block;
+    transition: 0.2s linear
+}
+section nav ul li a:hover a::after{
+    width: 100%;
+}
+section nav ul li a:hover{
+    color: yellow;
+}
+section nav .icon i{
+    font-size: 18px;
+    color: rgb(255, 255, 255);
+    margin: 0 5px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+section nav .icon i{
+    font-size: 18px;
+    color: rgb(255, 255, 255);
+    margin: 0 5px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+section{
+    padding: 2px 7%;
+}
+.about{
+    background-color:rgba(240, 165, 62, 0.898);
+    color: black;
+    border-radius: 10px;
+    margin-bottom: 10px;
+    margin-top:25px;
+    padding:10px;
+    padding-bottom: 70px;
+    width:1480px;
+}
+.about h1{
+    text-align:center;
+    color: black;
+    text-transform: uppercase;
+    padding-bottom: 4px;
+    font-size:50px;
+    text-decoration: underline;
+    font-family:fantasy;
+}
+.about .row{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+}
+.about .row .image img{
+    width: 50%;
+    border-radius: 10px;
+    height:430px;
+    margin:20px;
+    display: flex;
+}
+.about .row .content{
+    padding: 2px;
+    width:35%;
+    position: absolute;
+    top:170px;
+    left:800px;
+}
+.about .row .content h3{
+    font-size: larger;
+    color: black;
+    font-size: 40px;
+}
+.about .row .content p{
+    font-size: 24px;
+    color:black;
+    padding: 2px ;
+    line-height: 1.8;
+}
+h1, h2 {
+    margin-bottom: 5px;
+}
+
+main {
+    padding: 2rem;
+    background-color: rgba(240, 165, 62, 0.898);
+    font-size: 10px;
+    border-radius: 10px;
+    width:1430px;
+}
+#mission h2{
+    font-size: x-large;
+}
+#mission p{
+    font-size:20px;
+    margin: 15px;
+    position: relative;
+    left: 100px;
+    width: 70%;
+}
+
+.team-member {
+    margin-bottom: 7px;
+    font-size:15px;
+    position: relative;
+    left: 100px;
+}
+
+footer {
+    text-align: center;
+    padding: 2px;
+    background-color: #343a40;
+    color: white;
+    position: relative;
+    bottom: 0;
+    width:1480px;
+    border-radius: 10px;
+    margin: 2px;
+}
+
+@media (max-width: 1024px) {
+    section {
+        padding: 2px 5%;
+    }
+    .about .row .image img {
+        width: 48%;
+    }
+    .about .row .content {
+        width: 48%;
+    }
+    #mission p {
+        left: 50px;
+        width: 80%;
+    }
+}
+
+/* Mobile (less than 768px) */
+@media (max-width: 768px) {
+    section nav {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 10px;
+    }
+    section nav ul {
+        width: 100%;
+        text-align: center;
+        margin-top: 10px;
+    }
+    section nav ul li {
+        display: block;
+        margin: 10px 0;
+    }
+    section nav .logo {
+        font-size: 1rem;
+        margin-bottom: 10px;
+    }
+    .about .row {
+        flex-direction: column;
+        text-align: center;
+    }
+    .about .row .image img {
+        width: 80%;
+        margin: 10px auto;
+    }
+    .about .row .content {
+        width: 80%;
+        margin: 20px auto;
+        position: static;
+    }
+    .about h1 {
+        font-size: 30px;
+    }
+    #mission p {
+        font-size: 18px;
+        margin-left: 20px;
+        width: 90%;
+    }
+    footer {
+        width: 100%;
+        padding: 10px;
+    }
+}

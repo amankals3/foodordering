@@ -1,0 +1,299 @@
+/* Global Styles */
+body {
+    margin: 0;
+    font-family: 'Montserrat', sans-serif; /* Professional sans-serif font */
+    background-color: #d1e8ff; /* Midnight blue background for elegance */
+    color: #000000; /* Soft neutral text color */
+    line-height: 1.6;
+}
+
+/* Header */
+header {
+    background-color: #333a40; /* Darker shade for the header */
+    color: #aaf5af; /* Gold for text */
+    text-align: center;
+    padding: 20px 10px;
+    text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.5);
+}
+
+header h1 {
+    font-size: 3rem;
+    font-family: 'Playfair Display', serif; /* Elegant serif font for the title */
+    margin: 0;
+}
+
+header p {
+    font-size: 1.2rem;
+    margin-top: 10px;
+}
+
+/* Highlighted Heading */
+.head1 {
+    text-align: center;
+    font-size: 2.5rem;
+    font-family: 'Playfair Display', serif;
+    color: #ff5500;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin: 40px 0;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+}
+
+/* Category Section */
+.categories {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
+    padding: 20px;
+}
+
+.category {
+    background-color: #000000; /* Steely blue */
+    color: #ECECEC;
+    border-radius: 10px;
+    padding: 15px 30px;
+    font-size: 1.2rem;
+    font-weight: bold;
+    text-align: center;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.category:hover {
+    background-color: #D4AF37;
+    color: #2C3E50;
+    transform: translateY(-5px);
+}
+
+/* Restaurant Cards */
+.places {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 30px;
+    padding: 20px;
+}
+
+.place-card {
+    background-color: #709fce;
+    color: #ECECEC;
+    border-radius: 15px;
+    padding: 20px;
+    text-align: center;
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease-in-out;
+    max-width: 300px;
+}
+
+.place-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0px 6px 20px rgba(0, 0, 0, 0.3);
+}
+
+.place-card img {
+    width: 100%;
+    border-radius: 10px;
+    margin-bottom: 15px;
+}
+
+.place-card h3 {
+    font-size: 1.5rem;
+    font-family: 'Playfair Display', serif;
+    color: #D4AF37;
+    margin-bottom: 10px;
+}
+
+.place-card p {
+    font-size: 1rem;
+    margin-bottom: 10px;
+}
+
+.place-card button {
+    background-color: #D4AF37;
+    color: #2C3E50;
+    border: none;
+    padding: 10px 20px;
+    font-size: 1rem;
+    font-weight: bold;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease-in-out;
+}
+
+.place-card button:hover {
+    background-color: #C99C2D;
+}
+
+/* Booking Forms */
+.booking-form {
+    background-color: hsl(0, 0%, 100%);
+    border: 1px solid #D4AF37;
+    border-radius: 10px;
+    padding: 20px;
+    margin-top: 20px;
+}
+
+.booking-form h4 {
+    font-size: 1.5rem;
+    color: #D4AF37;
+    margin-bottom: 10px;
+}
+
+.booking-form label {
+    font-size: 1rem;
+    margin-bottom: 5px;
+    display: block;
+    color: #7b2727;
+}
+
+.booking-form input,
+.booking-form select {
+    width: 90%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #D4AF37;
+    border-radius: 5px;
+    background-color: #fdd9d9;
+    color: #000000;
+}
+
+.booking-form button {
+    background-color: #D4AF37;
+    color: #2C3E50;
+    border: none;
+    padding: 10px 20px;
+    font-size: 1rem;
+    border-radius: 5px;
+    cursor: pointer;
+    width: 100%;
+}
+
+.booking-form button:hover {
+    background-color: #C99C2D;
+}
+
+/* Footer */
+footer {
+    background-color: #000000;
+    color: #ECECEC;
+    text-align: center;
+    padding: 0px;
+    margin-top: 400px;
+}
+
+footer a {
+    color: #479be0;
+    text-decoration: none;
+}
+
+footer a:hover {
+    text-decoration: underline;
+}
+
+/* Responsive Design */
+
+/* Tablet Landscape (1024px to 768px) */
+@media (max-width: 1024px) {
+    .category {
+        font-size: 1rem;
+        padding: 10px 20px;
+    }
+
+    .place-card {
+        max-width: 90%;
+    }
+
+    header h1 {
+        font-size: 2.5rem;
+    }
+
+    .head1 {
+        font-size: 2.2rem;
+    }
+}
+
+/* Mobile (768px to 480px) */
+@media (max-width: 768px) {
+    body {
+        margin: 0 20px;
+    }
+
+    header h1 {
+        font-size: 2rem;
+    }
+
+    .head1 {
+        font-size: 2rem;
+    }
+
+    .categories {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .category {
+        font-size: 1.1rem;
+        padding: 10px 20px;
+        margin-bottom: 10px;
+    }
+
+    .places {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .place-card {
+        width: 100%;
+        max-width: 350px;
+        padding: 15px;
+    }
+
+    .booking-form {
+        padding: 15px;
+    }
+}
+
+/* Extra Small (Less than 480px) */
+@media (max-width: 480px) {
+    body {
+        margin: 0 10px;
+    }
+
+    header h1 {
+        font-size: 1.8rem;
+    }
+
+    .head1 {
+        font-size: 1.8rem;
+    }
+
+    .categories {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .category {
+        font-size: 1rem;
+        padding: 10px 15px;
+    }
+
+    .places {
+        gap: 20px;
+    }
+
+    .place-card {
+        width: 100%;
+        max-width: 300px;
+        padding: 15px;
+    }
+
+    .booking-form {
+        padding: 10px;
+    }
+
+    footer {
+        padding: 15px;
+    }
+}

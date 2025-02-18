@@ -1,0 +1,276 @@
+*,::before,::after{
+    margin: 0;
+    padding: 0;
+    box-sizing:border-box;
+}
+body{
+    margin: 0 100px;
+    background-color: rgb(13, 13, 42);
+}
+.nav{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-content: center;
+    padding: 30px 0;
+}
+.nav .logo h1{
+    font-weight: 600;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    color: burlywood;
+    font-size: 40px;
+    position: relative;
+    top: 1px;
+}
+.nav ul{
+    display:flex;
+    list-style: none;
+    position: absolute;
+    top:35px;
+    right: 500px;
+    justify-content: space-evenly;
+}
+.nav ul li{
+    margin-right: 30px;
+}
+.nav ul li a{
+    text-decoration: none;
+    font-weight: 550;
+    color: whitesmoke;
+    font-family: sans-serif;
+    font-size: 18px;
+}
+
+.nav ul li a:hover{
+    color:rgba(208, 120, 6, 0.711);
+    text-decoration: underline;
+}
+input{
+    padding: 10px 20px;
+    cursor: pointer;
+    font-weight: 600;
+}
+.signin{
+    background: transparent;
+    border: none;
+    color:rgb(13, 13, 42);
+    background-color: white;
+    border-radius: 5px;
+    font-size: 13px;
+}
+.signup{
+    background-color: white;
+    color:rgb(13, 13, 42);
+    outline: none;
+    border: none;
+    border-radius: 5px;
+    font-size: 13px;
+}
+section{
+    padding: 2px 7%;
+}
+.about{
+    background-color:rgba(189, 170, 144, 0.898);
+    color: black;
+    border-radius: 10px;
+    margin-bottom: 10px;
+    padding:10px;
+    padding-bottom: 70px;
+}
+.about h1{
+    text-align:center;
+    color: black;
+    text-transform: uppercase;
+    padding-bottom: 4px;
+    font-size:50px;
+    text-decoration: underline;
+    font-family:fantasy;
+}
+.about .row{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+}
+.about .row .image img{
+    width: 50%;
+    border-radius: 10px;
+    height:430px;
+    margin:20px;
+}
+.about .row .content{
+    padding: 4px;
+    width:35%;
+    position: absolute;
+    top:250px;
+    left:800px;
+}
+.about .row .content h3{
+    font-size: larger;
+    color: black;
+    font-size: 40px;
+}
+.about .row .content p{
+    font-size: 24px;
+    color:black;
+    padding: 2px ;
+    line-height: 1.8;
+}
+h1, h2 {
+    margin-bottom: 5px;
+}
+
+main {
+    padding: 2rem;
+    background-color: rgba(166, 170, 174, 0.907);
+    font-size: 10px;
+    border-radius: 10px;
+}
+#mission h2{
+    font-size: x-large;
+}
+#mission p{
+    font-size:20px;
+    margin: 15px;
+    position: relative;
+    left: 100px;
+    width: 70%;
+}
+
+.team-member {
+    margin-bottom: 7px;
+    font-size:15px;
+    position: relative;
+    left: 100px;
+}
+
+footer {
+    text-align: center;
+    padding: 20px;
+    background-color: #343a40;
+    color: white;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+    border-radius: 10px;
+    margin: 2px;
+}
+/* Responsive Styles */
+
+/* Mobile View (up to 768px) */
+@media (max-width: 768px) {
+    body {
+        margin: 0 10px;
+    }
+
+    .nav ul {
+        position: static;
+        margin-top: 10px;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .nav ul li {
+        margin-right: 0;
+        margin-bottom: 15px;
+    }
+
+    .nav .logo h1 {
+        font-size: 30px;
+    }
+
+    .about .row .image img {
+        width: 80%; /* Adjust image size */
+        height: auto;
+    }
+
+    .about .row .content {
+        width: 80%;
+        position: static;
+        padding: 20px;
+    }
+
+    .about h1 {
+        font-size: 35px;
+    }
+
+    .signup, .signin {
+        font-size: 14px;
+    }
+
+    main {
+        padding: 1rem;
+    }
+
+    #mission p {
+        width: 100%;
+        left: 0;
+        font-size: 18px;
+    }
+
+    footer {
+        padding: 15px;
+    }
+}
+
+/* Tablet View (768px to 1024px) */
+@media (max-width: 1024px) {
+    .nav ul {
+        right: 50px;
+    }
+
+    .nav .logo h1 {
+        font-size: 35px;
+    }
+
+    .about .row .image img {
+        width: 70%;
+        height: auto;
+    }
+
+    .about .row .content {
+        width: 50%;
+        position: static;
+        padding: 20px;
+    }
+
+    .about h1 {
+        font-size: 40px;
+    }
+
+    #mission p {
+        width: 80%;
+        left: 50px;
+        font-size: 18px;
+    }
+
+    footer {
+        padding: 15px;
+    }
+}
+
+/* Desktop View (1024px and up) */
+@media (min-width: 1024px) {
+    .nav .logo h1 {
+        font-size: 40px;
+    }
+
+    .about .row .image img {
+        width: 50%;
+    }
+
+    .about .row .content {
+        width: 35%;
+    }
+
+    .about h1 {
+        font-size: 50px;
+    }
+
+    .signup, .signin {
+        font-size: 13px;
+    }
+
+    footer {
+        padding: 20px;
+    }
+}

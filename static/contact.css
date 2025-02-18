@@ -1,0 +1,287 @@
+/* NAV BAR */
+*::after{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+html{
+    scroll-behavior: smooth;
+}
+body{
+    margin: 0 100px;
+    background-color: rgb(13, 13, 42);
+}
+.upper{
+    width: 100%;
+    height: 5vh;
+}
+section nav{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    position: fixed;
+    right: 0;
+    left: 0;
+    background: rgb(0, 0, 0);
+    box-shadow: 0 0 10px black;
+    z-index: 1000;
+} 
+section nav .logo{
+    width: 100px;
+    cursor: pointer;
+    margin: 7px 0;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 1.2rem;
+    font-style: oblique;
+    color: rgb(179, 255, 0);
+}
+section nav ul li{
+    display: inline-block;
+    margin: 0 15px;
+}
+section nav ul li a{
+    text-decoration: none;
+    color: rgb(255, 255, 255);
+    font-weight: 500;
+    font-size: 17px;
+    transition: 0.1s;
+}
+section nav ul li a::after{
+    content:'';
+    width: 100%;
+    height: 2px;
+    background: rgb(212, 255, 0);
+    display: block;
+    transition: 0.2s linear;
+}
+section nav ul li a:hover a::after{
+    width: 100%;
+}
+section nav ul li a:hover{
+    color: yellow;
+}
+section nav .icon i{
+    font-size: 18px;
+    color: rgb(255, 255, 255);
+    margin: 0 5px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+input{
+    padding: 10px 20px;
+    cursor: pointer;
+    font-weight: 600;
+}
+.signin{
+    background: transparent;
+    border: none;
+    color:rgb(13, 13, 42);
+    background-color: white;
+    border-radius: 5px;
+    font-size: 13px;
+}
+.search{
+    background-color: white;
+    height: 60px;
+    width: 35%;
+    float: right;
+    visibility: inherit;
+    border-radius: 10px;
+}
+.search input{
+    width: 100%;
+    line-height: 60px;
+    outline: 0;
+    border: 0;
+    font-family: inherit;
+    font-size: 1.5em;
+    font-weight: 300;
+    text-align: right;
+    background-color: transparent;
+}
+.search input::placeholder{
+    color: black;
+}   
+.signup{
+    background-color: white;
+    color: rgb(13, 13, 42);
+    outline: none;
+    border: none;
+    border-radius: 5px;
+    font-size: 13px;
+}
+section nav .icon i{
+    font-size: 18px;
+    color: rgb(255, 255, 255);
+    margin: 0 5px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+/* About page */
+body .container {
+    width: 40%;
+    margin: 40px auto;
+    background-color: #e1f1e0;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(61, 52, 52, 0.2);
+}
+
+h1 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+label {
+    display: block;
+    margin-bottom: 10px;
+}
+
+form input, textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: none;
+    border-radius: 10px;
+    background-color: #ffffff; /* White background */
+    color: #000000; /* Black text color */
+}
+
+/* Input and Textarea Placeholder */
+input[type="text"]::placeholder,
+textarea::placeholder {
+    color: #aaa; /* Light grey color for placeholder text */
+}
+
+input[type="submit"] {
+    background-color: #010100;
+    color: #000000;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.social-media {
+    margin-top: 20px;
+}
+
+.social-media a {
+    display: inline-block;
+    margin-right: 20px;
+    padding: 10px 20px;
+    border-radius: 10px;
+    color: #fff;
+    text-decoration: none;
+}
+
+.facebook {
+    background-color: #47619b;
+}
+
+.twitter {
+    background-color: #1da1f2;
+}
+
+.instagram {
+    background-color: #c71c55;
+}
+
+.address {
+    margin-top: 20px;
+}
+
+.address p {
+    margin-bottom: 10px;
+}
+
+/* Responsive Design */
+
+/* Tablet Landscape (1024px to 768px) */
+@media (max-width: 1024px) {
+    body {
+        margin: 0 50px;
+    }
+    section nav {
+        padding: 10px;
+    }
+    section nav .logo {
+        font-size: 1rem;
+    }
+    section nav ul li a {
+        font-size: 15px;
+    }
+    .search {
+        width: 45%;
+    }
+    .container {
+        width: 60%;
+    }
+    input[type="submit"] {
+        padding: 8px 18px;
+    }
+}
+
+/* Mobile (768px to 480px) */
+@media (max-width: 768px) {
+    body {
+        margin: 0 20px;
+    }
+    section nav {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 10px;
+    }
+    section nav .logo {
+        font-size: 1.1rem;
+        margin: 10px 0;
+    }
+    section nav ul {
+        flex-direction: column;
+        gap: 10px;
+    }
+    section nav ul li a {
+        font-size: 14px;
+    }
+    .search {
+        width: 100%;
+        margin-top: 10px;
+    }
+    .container {
+        width: 90%;
+    }
+    input[type="submit"] {
+        width: 100%;
+        padding: 10px;
+    }
+}
+
+/* Extra Small (Less than 480px) */
+@media (max-width: 480px) {
+    body {
+        margin: 0 10px;
+    }
+    section nav {
+        padding: 8px;
+    }
+    section nav .logo {
+        font-size: 1rem;
+    }
+    section nav ul li a {
+        font-size: 13px;
+    }
+    .search {
+        width: 100%;
+        margin-top: 10px;
+    }
+    .container {
+        width: 100%;
+        padding: 15px;
+    }
+    input[type="submit"] {
+        width: 100%;
+        padding: 12px;
+    }
+}

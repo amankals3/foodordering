@@ -1,0 +1,154 @@
+/* Scoped Styles for Navbar Section */
+.upper {
+    background-color: #1A1A1A; /* Dark background for the navbar */
+    color: #ECECEC; /* Neutral text color */
+    font-family: 'Montserrat', sans-serif;
+    padding: 10px 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+/* Logo Styling */
+.upper .logo {
+    font-size: 1.8rem;
+    font-weight: bold;
+    color: #D4AF37; /* Gold color for logo */
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+/* Navigation Links */
+.upper ul {
+    list-style: none;
+    display: inline-block;
+    gap: 20px;
+    margin: 0;
+    padding: 0;
+}
+
+.upper ul li {
+    display: inline-block;
+}
+
+.upper ul li a {
+    text-decoration: none;
+    color: #ECECEC;
+    font-weight: bold;
+    font-size: 1rem;
+    padding: 5px 10px;
+    transition: color 0.3s ease-in-out;
+}
+
+.upper ul li a:hover {
+    color: #D4AF37; /* Gold hover effect */
+}
+
+/* Location Section */
+.upper .location {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.upper .location i {
+    color: #D4AF37; /* Gold map icon */
+    font-size: 1.2rem;
+}
+
+.upper .location-input {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.upper .location-input input {
+    padding: 5px 10px;
+    border: 1px solid #D4AF37;
+    border-radius: 5px;
+    background-color: #2C3E50;
+    color: #ECECEC;
+}
+
+.upper .location-input button {
+    background-color: #D4AF37;
+    color: #1A1A1A;
+    border: none;
+    padding: 5px 15px;
+    font-size: 0.9rem;
+    font-weight: bold;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease-in-out;
+}
+
+.upper .location-input button:hover {
+    background-color: #C99C2D;
+}
+
+/* Hamburger Menu (for smaller screens) */
+.upper .open-nav {
+    font-size: 1.8rem;
+    color: #ECECEC;
+    cursor: pointer;
+    display: none; /* Hidden by default */
+}
+
+.upper .side-nav {
+    height: 100%; /* Full-screen height */
+    width: 0;
+    position: fixed;
+    z-index: 1100;
+    top: 0;
+    left: 0;
+    background-color: #2C3E50;
+    overflow-x: hidden;
+    transition: 0.3s;
+    padding-top: 60px;
+}
+
+.upper .side-nav a {
+    padding: 10px 20px;
+    text-decoration: none;
+    font-size: 1.2rem;
+    color: #ECECEC;
+    display: block;
+    transition: color 0.3s ease-in-out;
+}
+
+.upper .side-nav a:hover {
+    color: #D4AF37;
+}
+
+.upper .side-nav .close-btn {
+    position: absolute;
+    top: 10px;
+    right: 25px;
+    font-size: 2rem;
+    cursor: pointer;
+}
+
+/* Responsive Design for Navbar */
+@media (max-width: 768px) {
+    .upper ul {
+        display: none; /* Hide default nav links */
+    }
+
+    .upper .open-nav {
+        display: block; /* Show hamburger icon */
+    }
+
+    .upper .location-input {
+        flex-direction: column;
+        gap: 5px;
+    }
+
+    .upper .location-input input,
+    .upper .location-input button {
+        width: 100%;
+    }
+}

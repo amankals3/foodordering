@@ -1,0 +1,164 @@
+*{
+	box-sizing:border-box;
+	padding:0;
+	margin:0;
+	font-family:arial;
+	
+}
+body{
+    background-color: aliceblue;
+    background-image:linear-gradient(to left, rgba( 145, 146, 122, 0.62),rgba(218, 13, 29, 0.8))}
+h2{
+    color: rgb(226, 90, 90);
+}
+h4 {
+    color: aliceblue;
+}
+.container{
+	
+    height:100%;
+	text-align:center;
+	display:flex;
+	align-items: center;
+	justify-content: center;
+    margin-top: 25px;
+    
+}
+
+
+.login-form{
+	background-color: ghostwhite;
+	width:500px;
+	height:auto;
+    padding:30px;
+	display:grid;	
+	border-radius: 8px;
+	text-align: left;
+    background-image:url("image/buger.jpg");
+	background-size:cover;
+}
+
+input[type=text]{
+	margin-bottom:20px;
+	border-radius: 7px;
+	padding:6px;
+	margin-top:3px
+}
+input[type=email]{
+	margin-bottom:20px;
+	border-radius: 7px;
+	padding:6px;
+	margin-top: 3px;
+}
+input[type=password]{
+	margin-bottom:20px;
+	border-radius: 7px;
+	padding:6px;
+	margin-top: 3px;
+}
+
+.login{
+	background-color: crimson;
+	padding:10px;
+	border:none;
+	margin-top: 30px;
+	margin-bottom: 30px;
+	border-radius:5px;
+	transition: 0.5s ease;
+	
+}
+.login a{
+	color:white;
+	font-weight: bold;
+	text-transform: uppercase;
+	text-decoration: none;
+	font-size: medium;
+}
+.login:hover{
+	background-color: darkred;
+}
+
+.forget{
+	display:flex;
+	align-items: center;
+	justify-content: space-between;
+}
+
+.forget a{
+	text-decoration: none;
+	color:crimson;
+	transition: 0.1s ease;
+}
+
+.forget a:hover{
+	color:darkred;
+}
+/* Responsive Styles */
+
+/* Mobile (up to 768px) */
+@media (max-width: 768px) {
+    .container {
+        margin-top: 10px;
+    }
+
+    .login-form {
+        width: 90%; /* Make the form width more flexible on mobile */
+        padding: 15px;
+    }
+
+    input[type=text], input[type=email], input[type=password] {
+        padding: 10px;
+    }
+
+    .login {
+        padding: 15px;
+        font-size: 14px; /* Adjust button size */
+    }
+
+    h2 {
+        font-size: 24px; /* Adjust heading size for mobile */
+    }
+
+    h4 {
+        font-size: 14px;
+    }
+}
+
+/* Tablet (768px to 1024px) */
+@media (max-width: 1024px) {
+    .login-form {
+        width: 80%; /* Slightly reduce the form width on tablets */
+        padding: 20px;
+    }
+
+    input[type=text], input[type=email], input[type=password] {
+        padding: 8px;
+    }
+
+    .login {
+        padding: 12px;
+    }
+
+    h2 {
+        font-size: 28px; /* Slightly adjust heading size for tablet */
+    }
+
+    h4 {
+        font-size: 16px;
+    }
+}
+
+/* Desktop (1024px and up) */
+@media (min-width: 1024px) {
+    .login-form {
+        width: 500px; /* Maintain default width for larger screens */
+    }
+
+    h2 {
+        font-size: 32px;
+    }
+
+    h4 {
+        font-size: 18px;
+    }
+}
